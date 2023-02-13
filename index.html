@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cx-1">
+            <h1>Calculadora online</h1>
+            <div class="calc">
+                <input type="number" id="nm1" placeholder="Digite um número">
+                <input type="number" id="nm2" placeholder="Digite mais um número">
+            </div>
+            <div class="calc2">
+                <button class="btn-98" onclick="somar()">Somar</button>
+                <button class="btn-98" onclick="subtrair()">Subtrair</button>
+                <button class="btn-98" onclick="dividir()">Dividir</button>
+                <button class="btn-98" onclick="multiplicar()">Multiplicar</button>
+            </div>
+            <div class="resul">
+                <p>Resultado: <span id="res"></span></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function somar(){
+            var num1=document.getElementById("nm1").value
+            var num2=document.getElementById("nm2").value
+            num1=parseFloat(num1)
+            num2=parseFloat(num2)
+            var resultado=(num1 + num2)
+            res.innerHTML = resultado
+        }
+
+        function subtrair(){
+            var num1=document.getElementById("nm1").value
+            var num2=document.getElementById("nm2").value
+            num1=parseFloat(num1)
+            num2=parseFloat(num2)
+            var resultado=(num1 - num2)
+            res.innerHTML = resultado
+        }
+        
+        function dividir(){
+            var num1=document.getElementById("nm1").value
+            var num2=document.getElementById("nm2").value
+            num1=parseFloat(num1)
+            num2=parseFloat(num2)
+            var resultado=(num1 / num2)
+            res.innerHTML = resultado
+
+            if(resultado!=Infinity){
+                res.innerHTML = resultado
+            }
+            else{
+                alert("Não é possível dividir um número por 0")
+            }
+        }    
+        function multiplicar(){
+            var num1=document.getElementById("nm1").value
+            var num2=document.getElementById("nm2").value
+            num1=parseFloat(num1)
+            num2=parseFloat(num2)
+            var resultado= (num1 * num2)
+            res.innerHTML = resultado
+        }
+    </script>
+</body>
+</html>
